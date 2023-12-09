@@ -31,7 +31,7 @@ def simpson38_func(f, a, b, m):
 
 # função integral:
 def integral(x):
-    return x**2 * np.log(x**2 + 1)
+    return x**2 * np.log((x**2) + 1)
     #return x**2
 
 
@@ -70,7 +70,10 @@ resultado_simpson38 = simpson38_func(integral, a, b, m_simpson38)
 result_quad, _ = quad(integral, a, b)
 
 # Mostrando os valores
+# 2 - A
 print(f"Resultado usando regra do Trapézio com {m_trapezio} subintervalos: {resultado_trapezio}")
 print(f"Resultado usando regra 1/3 de Simpson com {m_simpson13} subintervalos: {resultado_simpson13}")
 print(f"Resultado usando regra 3/8 de Simpson com {m_simpson38} subintervalos: {resultado_simpson38}")
+
+#2 - B
 print(f"Resultado usando função quad: {result_quad}")
